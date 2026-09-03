@@ -10,10 +10,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hEoxckVmuyr1xwbG6l8t-63" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Equipo" vertex="1">
-          <mxGeometry height="140" width="160" x="80" y="40" as="geometry" />
+          <mxGeometry height="160" width="160" x="80" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="hEoxckVmuyr1xwbG6l8t-64" parent="hEoxckVmuyr1xwbG6l8t-63" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="+ id_equipo (PK) : int&lt;div&gt;+ nombre : varchar(50)&lt;/div&gt;&lt;div&gt;+ abreviatura : varchar(3)&lt;/div&gt;&lt;div&gt;+ partidos : int&lt;/div&gt;&lt;div&gt;+ victorias : int&lt;/div&gt;&lt;div&gt;+ empates : int&lt;/div&gt;&lt;div&gt;+ derrotas : int&lt;/div&gt;" vertex="1">
-          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        <mxCell id="hEoxckVmuyr1xwbG6l8t-64" parent="hEoxckVmuyr1xwbG6l8t-63" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="+ id_equipo (PK) : int&lt;div&gt;+ codigo : int&lt;br&gt;&lt;div&gt;+ nombre : varchar(50)&lt;/div&gt;&lt;div&gt;+ abreviatura : varchar(3)&lt;/div&gt;&lt;div&gt;+ puntos : int&lt;/div&gt;&lt;div&gt;+ victorias : int&lt;/div&gt;&lt;div&gt;+ empates : int&lt;/div&gt;&lt;div&gt;+ derrotas : int&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="134" width="160" y="26" as="geometry" />
         </mxCell>
         <mxCell id="hEoxckVmuyr1xwbG6l8t-68" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Posicion" vertex="1">
           <mxGeometry height="90" width="160" x="600" y="560" as="geometry" />

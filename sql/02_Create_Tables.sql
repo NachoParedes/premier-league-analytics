@@ -3,9 +3,10 @@ USE premier_league_analytics;
 
 CREATE TABLE IF NOT EXISTS equipo (
     id_equipo INT PRIMARY KEY,
+    codigo INT NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     abreviatura VARCHAR(3) NOT NULL,
-    partidos INT DEFAULT 0,
+    puntos INT DEFAULT 0,
     victorias INT DEFAULT 0,
     empates INT DEFAULT 0,
     derrotas INT DEFAULT 0
