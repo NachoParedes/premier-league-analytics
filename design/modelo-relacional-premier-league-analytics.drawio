@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="Página-1" id="MvyUQ2HTZzOuoZZn8oIe">
-    <mxGraphModel dx="928" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="445" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,12 +22,12 @@
           <mxGeometry height="64" width="160" y="26" as="geometry" />
         </mxCell>
         <mxCell id="hEoxckVmuyr1xwbG6l8t-70" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Jugador" vertex="1">
-          <mxGeometry height="260" width="230" x="80" y="400" as="geometry" />
+          <mxGeometry height="320" width="230" x="80" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="hEoxckVmuyr1xwbG6l8t-71" parent="hEoxckVmuyr1xwbG6l8t-70" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="+ id_jugador&amp;nbsp; (PK) : int&lt;div&gt;+ nombre : varchar(50)&lt;/div&gt;&lt;div&gt;+ apellido : varchar(50)&lt;/div&gt;&lt;div&gt;+ minutos_jugados : int&lt;/div&gt;&lt;div&gt;+ goles : int&lt;/div&gt;&lt;div&gt;+ asistencias : int&lt;/div&gt;&lt;div&gt;+ goles_esperados : decimal(5,2)&lt;/div&gt;&lt;div&gt;+ asistencias_esperadas : decimal (5,2)&lt;/div&gt;&lt;div&gt;+ vallas_invictas : int&lt;/div&gt;&lt;div&gt;+ atajadas : int&lt;/div&gt;&lt;div&gt;+ tarjetas_rojas : int&lt;/div&gt;&lt;div&gt;+ tarjetas_amarillas : int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ id_equipo (FK) : int&lt;/div&gt;&lt;div&gt;+ id_posicion (FK) : int&lt;/div&gt;" vertex="1">
-          <mxGeometry height="234" width="230" y="26" as="geometry" />
+        <mxCell id="hEoxckVmuyr1xwbG6l8t-71" parent="hEoxckVmuyr1xwbG6l8t-70" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="+ id_jugador&amp;nbsp; (PK) : int&lt;div&gt;+ nombre : varchar(50)&lt;/div&gt;&lt;div&gt;+ apellido : varchar(50)&lt;/div&gt;&lt;div&gt;+ minutos_jugados : int&lt;/div&gt;&lt;div&gt;+ goles : int&lt;/div&gt;&lt;div&gt;+ asistencias : int&lt;/div&gt;&lt;div&gt;+ goles_esperados : decimal(5,2)&lt;/div&gt;&lt;div&gt;+ asistencias_esperadas : decimal (5,2)&lt;/div&gt;&lt;div&gt;+ recuperaciones : int&lt;/div&gt;&lt;div&gt;+ entradas : int&lt;/div&gt;&lt;div&gt;+&amp;nbsp;despejes_bloqueos_intercepciones: int&lt;/div&gt;&lt;div&gt;+ vallas_invictas : int&lt;/div&gt;&lt;div&gt;+&amp;nbsp;goles_recibidos_esperados&lt;/div&gt;&lt;div&gt;+ atajadas : int&lt;/div&gt;&lt;div&gt;+ tarjetas_rojas : int&lt;/div&gt;&lt;div&gt;+ tarjetas_amarillas : int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ id_equipo (FK) : int&lt;/div&gt;&lt;div&gt;+ id_posicion (FK) : int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="294" width="230" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="hEoxckVmuyr1xwbG6l8t-74" edge="1" parent="1" source="hEoxckVmuyr1xwbG6l8t-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+        <mxCell id="hEoxckVmuyr1xwbG6l8t-74" edge="1" parent="1" source="hEoxckVmuyr1xwbG6l8t-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=1.001;entryY=0.906;entryDx=0;entryDy=0;entryPerimeter=0;" target="hEoxckVmuyr1xwbG6l8t-71">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="310" y="640" as="targetPoint" />
           </mxGeometry>
@@ -36,10 +36,10 @@
           <mxGeometry height="20" width="20" x="60" y="60" as="geometry" />
         </mxCell>
         <mxCell id="hEoxckVmuyr1xwbG6l8t-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="∞" vertex="1">
-          <mxGeometry height="20" width="20" x="60" y="630" as="geometry" />
+          <mxGeometry height="20" width="20" x="60" y="680" as="geometry" />
         </mxCell>
         <mxCell id="hEoxckVmuyr1xwbG6l8t-78" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="∞" vertex="1">
-          <mxGeometry height="20" width="20" x="310" y="620" as="geometry" />
+          <mxGeometry height="20" width="20" x="310" y="680" as="geometry" />
         </mxCell>
         <mxCell id="hEoxckVmuyr1xwbG6l8t-79" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
           <mxGeometry height="20" width="20" x="580" y="585" as="geometry" />
