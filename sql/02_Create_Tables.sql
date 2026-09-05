@@ -5,11 +5,7 @@ CREATE TABLE IF NOT EXISTS equipo (
     id_equipo INT PRIMARY KEY,
     codigo INT NOT NULL,
     nombre VARCHAR(50) NOT NULL,
-    abreviatura VARCHAR(3) NOT NULL,
-    puntos INT DEFAULT 0,
-    victorias INT DEFAULT 0,
-    empates INT DEFAULT 0,
-    derrotas INT DEFAULT 0
+    abreviatura VARCHAR(3) NOT NULL
 );
 
 
