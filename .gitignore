@@ -21,3 +21,6 @@ Thumbs.db
 *.bkp
 *.drawio.bkp
 .$*
+
+#Test de la Api
+src/test_api.py
