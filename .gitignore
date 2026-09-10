@@ -1,0 +1,30 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Variables de entorno y credenciales (claves de DB, tokens)
+.env
+
+# Archivos temporales y caché de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuración local de IDEs y SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archivos temporales y respaldos de Draw.io
+*.bkp
+*.drawio.bkp
+.$*
+
+#Test de la Api
+src/test_api.py
+
+.env
+venv/
+__pycache__/
