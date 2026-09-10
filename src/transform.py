@@ -18,7 +18,7 @@ def transformar_equipos(datos_raw):
     return df_equipos.astype({"id_equipo": int, "codigo": int})
 
 
-def transformar_juegadores(datos_raw):
+def transformar_jugadores(datos_raw):
     if "elements" not in datos_raw:
         return pd.DataFrame()
 
@@ -30,21 +30,19 @@ def transformar_juegadores(datos_raw):
         "second_name": "apellido",
         "minutes": "minutos_jugados",
 
-        # Rendimiento ofensivo
+        
         "goals_scored": "goles",
         "assists": "asistencias",
         "expected_goals": "goles_esperados",
         "expected_assists": "asistencias_esperadas",
 
-        # Rendimiento defensivo
+        
         "recoveries": "recuperaciones",
         "tackles": "entradas",
         "clearances_blocks_interceptions": "despejes_bloqueos_intercepciones",
+        "saves": "atajadas",
         "clean_sheets": "vallas_invictas",
         "expected_goals_conceded": "goles_recibidos_esperados",
-
-        # Arquero y Disciplina
-        "saves": "atajadas",
         "red_cards": "tarjetas_rojas",
         "yellow_cards": "tarjetas_amarillas",
 
@@ -67,7 +65,7 @@ def transformar_posiciones(datos_raw):
     
     columnas_mapeo = {
         "id": "id_posicion",
-        "singular_name": "nombre_posicion",
+        "singular_name": "nombre",
         "singular_name_short": "abreviatura"
     }
 
@@ -81,7 +79,7 @@ if __name__ == "__main__":
     raw_data = obtener_datos()
     if raw_data:
         df_equipo = transformar_equipos(raw_data)
-        df_jugador = transformar_juegadores(raw_data)
+        df_jugador = transformar_jugadores(raw_data)
         df_posiciones = transformar_posiciones(raw_data)
         print(df_equipo.head())
         print("--------------------------------------------------------")
