@@ -24,3 +24,7 @@ Thumbs.db
 
 #Test de la Api
 src/test_api.py
+
+.env
+venv/
+__pycache__/
