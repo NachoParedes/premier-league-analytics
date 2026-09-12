@@ -48,3 +48,33 @@ CREATE TABLE IF NOT EXISTS jugador (
     CONSTRAINT fk_jugador_equipo FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo) ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_jugador_posicion FOREIGN KEY (id_posicion) REFERENCES posicion(id_posicion) ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS jugador_auditoria (
+    id_auditoria INT AUTO_INCREMENT PRIMARY KEY,
+    id_jugador INT NOT NULL,
+    
+   
+    id_equipo INT,
+    id_posicion INT,
+    
+    
+    minutos_jugados INT,
+    goles INT,
+    asistencias INT,
+    goles_esperados DECIMAL(5,2),
+    asistencias_esperadas DECIMAL(5,2),
+    recuperaciones INT,
+    entradas INT,
+    despejes_bloqueos_intercepciones INT,
+    vallas_invictas INT,
+    goles_recibidos_esperados DECIMAL(5,2),
+    atajadas INT,
+    tarjetas_rojas INT,
+    tarjetas_amarillas INT,
+    
+    
+    tipo_operacion VARCHAR(10) NOT NULL, -- 'UPDATE' o 'DELETE'
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador) ON DELETE CASCADE
+);
