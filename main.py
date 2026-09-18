@@ -1,15 +1,12 @@
 import logging
 import sys
 
-
+# Configuración de logs
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout)
-    ]
+    handlers=[logging.StreamHandler(sys.stdout)]
 )
-
 
 from src.extract import obtener_datos
 from src.transform import (
@@ -25,39 +22,32 @@ def ejecutar_pipeline():
     logging.info("  INICIANDO PIPELINE ETL: PREMIER LEAGUE ANALYTICS ")
     logging.info("==================================================")
 
-    # ----------------------------------------------------
-    # 1. EXTRACCIÓN (Extract)
-    # ----------------------------------------------------
-    logging.info("Extrayendo datos desde la API...")
+    # 1. EXTRACCIÓN
+    logging.info("[1/3] Extrayendo datos desde la API...")
     datos_raw = obtener_datos()
 
     if not datos_raw:
-        logging.error("Fallo crítico: No se obtuvieron datos de la API. Abortando pipeline.")
+        logging.error("Fallo crítico: No se obtuvieron datos de la API. Abortando.")
         return
 
-    # ----------------------------------------------------
-    # 2. TRANSFORMACIÓN (Transform)
-    # ----------------------------------------------------
-    logging.info("Transformando y validando datasets...")
+    # 2. TRANSFORMACIÓN
+    logging.info("[2/3] Transformando datasets...")
     try:
         df_equipos = transformar_equipos(datos_raw)
         df_posiciones = transformar_posiciones(datos_raw)
         df_jugadores = transformar_jugadores(datos_raw)
 
-        logging.info(f" -> Equipos procesados: {len(df_equipos)}")
-        logging.info(f" -> Posiciones procesadas: {len(df_posiciones)}")
-        logging.info(f" -> Jugadores procesados (limpios): {len(df_jugadores)}")
+        logging.info(f" -> Equipos: {len(df_equipos)}")
+        logging.info(f" -> Posiciones: {len(df_posiciones)}")
+        logging.info(f" -> Jugadores: {len(df_jugadores)}")
 
     except Exception as e:
-        logging.error(f"Error durante la transformación de datos: {e}")
+        logging.error(f"Error en transformación: {e}")
         return
 
-    # ----------------------------------------------------
-    # 3. CARGA (Load)
-    # ----------------------------------------------------
-    logging.info("Cargando datos en MySQL...")
+    # 3. CARGA
+    logging.info("[3/3] Cargando datos en MySQL...")
     try:
-       
         cargar_posiciones(df_posiciones)
         cargar_equipos(df_equipos)
         cargar_jugadores(df_jugadores)
@@ -67,7 +57,7 @@ def ejecutar_pipeline():
         logging.info("==================================================")
 
     except Exception as e:
-        logging.error(f"Error durante la carga a la base de datos: {e}")
+        logging.error(f"Error en carga: {e}")
 
 
 if __name__ == "__main__":
