@@ -38,6 +38,7 @@ tarjetas_rojas INT DEFAULT 0,
 tarjetas_amarillas INT DEFAULT 0,
 
 -- Claves Foráneas
+
 id_equipo INT NOT NULL,
 id_posicion INT NOT NULL,
 CONSTRAINT fk_jugador_equipo FOREIGN KEY (id_equipo) REFERENCES equipo (id_equipo) ON DELETE RESTRICT ON UPDATE CASCADE,

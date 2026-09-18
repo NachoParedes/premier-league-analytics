@@ -125,7 +125,7 @@ BEGIN
         goles,
         asistencias, 
         goles_esperados, 
-        sistencias_esperadas, 
+        asistencias_esperadas, 
         recuperaciones,
         entradas, 
         despejes_bloqueos_intercepciones, 
