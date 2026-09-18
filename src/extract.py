@@ -1,33 +1,20 @@
 import requests
+import logging
 
-url = "https://fantasy.premierleague.com/api/bootstrap-static/"
-
+URL_API = "https://fantasy.premierleague.com/api/bootstrap-static/"
 
 def obtener_datos():
-
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-
+    """Realiza la petición HTTP a la API de la Premier League y retorna el JSON."""
     try:
-        respuesta = requests.get(url, headers=headers, timeout=10)
-        respuesta.raise_for_status()
-
-        datos = respuesta.json()
-        print("Datos extraidos.")
-
-#       print("Entidades disponibles:", list(datos.keys()))
-#       entidades = ["teams", "element_types", "elements"]
-
-#       for entidad in entidades:
-#           if entidad in datos and len(datos[entidad]) > 0:
-#               print(f"\n--- Atributos de '{entidad}' ---")
-#               print(list(datos[entidad][0].keys()))
-
-        return datos
-
-    except requests.exceptions.RequestException as error:
-        print(f"Error al conectar con la API: {error}")
+        response = requests.get(URL_API, timeout=10)
+        response.raise_for_status()
+        logging.info("Extracción exitosa desde la API.")
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error al conectar con la API: {e}")
         return None
 
-
 if __name__ == "__main__":
-    obtener_datos()
+    datos = obtener_datos()
+    if datos:
+        print(f"Claves recibidas en el JSON: {list(datos.keys())}")
